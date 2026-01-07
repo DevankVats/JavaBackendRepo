@@ -1,0 +1,35 @@
+class A{
+  public void show(){
+    System.out.println("Inside A show");
+  }
+}
+class B extends A{
+  public void show(){
+    System.out.println("Inside B show");
+  }
+}
+class C extends A{
+  public void show(){
+    System.out.println("Inside C show");
+  }
+}
+
+
+
+
+public class DynamicMethodDispatch {
+  public static void main(String[] args){
+
+    //since the behaviour of methods is decided at run time thats why it terms as Dynamic Method Dispatch
+    A obj=new A();
+    obj.show();
+
+    obj=new B();
+    obj.show();
+
+    obj=new C();
+    obj.show();
+
+  }
+  
+}
